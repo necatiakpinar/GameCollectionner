@@ -11,7 +11,7 @@ import SwiftUI
 struct SolidifyAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GamesView(games: .constant(BaseGame.sampleData))
         }
     }
 }

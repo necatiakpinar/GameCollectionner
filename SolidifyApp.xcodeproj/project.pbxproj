@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF49BA592AE5079400D10036 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49BA582AE5079400D10036 /* Theme.swift */; };
 		DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */; };
 		DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */; };
 		DFC8936E2AE3AAE7006C3A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */; };
 		DFC893712AE3AAE7006C3A31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC893702AE3AAE7006C3A31 /* Preview Assets.xcassets */; };
+		DFD1757D2AE3B7E000613AB3 /* GameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1757C2AE3B7E000613AB3 /* GameCardView.swift */; };
+		DFD1757F2AE3C31400613AB3 /* BaseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1757E2AE3C31400613AB3 /* BaseGame.swift */; };
+		DFD175812AE3C40C00613AB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD175802AE3C40C00613AB3 /* Constants.swift */; };
+		DFD175832AE3CED800613AB3 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD175822AE3CED800613AB3 /* GamesView.swift */; };
+		DFD9E7D12AE5201E00B43030 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9E7D02AE5201E00B43030 /* GameDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF49BA582AE5079400D10036 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DFC893662AE3AAE6006C3A31 /* SolidifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolidifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidifyAppApp.swift; sourceTree = "<group>"; };
 		DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC893702AE3AAE7006C3A31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DFD1757C2AE3B7E000613AB3 /* GameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardView.swift; sourceTree = "<group>"; };
+		DFD1757E2AE3C31400613AB3 /* BaseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGame.swift; sourceTree = "<group>"; };
+		DFD175802AE3C40C00613AB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DFD175822AE3CED800613AB3 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		DFD9E7D02AE5201E00B43030 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +63,14 @@
 		DFC893682AE3AAE6006C3A31 /* SolidifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				DFD1757A2AE3B58800613AB3 /* Models */,
+				DFD1757B2AE3B75A00613AB3 /* Views */,
 				DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */,
 				DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */,
+				DFD175802AE3C40C00613AB3 /* Constants.swift */,
 				DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */,
 				DFC8936F2AE3AAE7006C3A31 /* Preview Content */,
+				DF49BA582AE5079400D10036 /* Theme.swift */,
 			);
 			path = SolidifyApp;
 			sourceTree = "<group>";
@@ -65,6 +81,24 @@
 				DFC893702AE3AAE7006C3A31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DFD1757A2AE3B58800613AB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1757E2AE3C31400613AB3 /* BaseGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFD1757B2AE3B75A00613AB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1757C2AE3B7E000613AB3 /* GameCardView.swift */,
+				DFD175822AE3CED800613AB3 /* GamesView.swift */,
+				DFD9E7D02AE5201E00B43030 /* GameDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD175832AE3CED800613AB3 /* GamesView.swift in Sources */,
+				DFD175812AE3C40C00613AB3 /* Constants.swift in Sources */,
 				DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */,
+				DFD1757D2AE3B7E000613AB3 /* GameCardView.swift in Sources */,
+				DFD1757F2AE3C31400613AB3 /* BaseGame.swift in Sources */,
 				DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */,
+				DF49BA592AE5079400D10036 /* Theme.swift in Sources */,
+				DFD9E7D12AE5201E00B43030 /* GameDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
