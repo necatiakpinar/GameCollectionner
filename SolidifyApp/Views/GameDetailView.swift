@@ -1,16 +1,25 @@
 import SwiftUI
+import Combine
 
 struct GameDetailView: View {
     @Binding var game: BaseGame
+    @ObservedObject var userGames: UserGames
     @State private var isAdded: Bool = false
     
     var body: some View {
         List {
             Section(header: Text("Definition")) {
-                Text("Last of us is a great game bro")
+                Text("\(game.name) is a great game bro")
                 
                 Button(action: {
                     isAdded.toggle()
+                    if (isAdded) {
+                        userGames.addGame(game: game)
+                    }
+                    else {
+                        userGames.removeGame(game: game)
+                    }
+                    
                 }) {
                     HStack {
                         if isAdded {
@@ -31,17 +40,24 @@ struct GameDetailView: View {
                 }
             }
         }
-        .buttonStyle(PlainButtonStyle()) // Bu satırı ekleyin
+        .onAppear {
+            if userGames.hasGame(game: game) {
+                isAdded = true
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
         .navigationTitle(game.name)
-    
-
+        
+        
     }
 }
 
 
-struct GamedetailView_PreviewProvider: PreviewProvider
+struct GameDetailView_PreviewProvider: PreviewProvider
 {
+    static var userGames = UserGames(games: BaseGame.sampleData, events: GameEvents())
+    
     static var previews: some View {
-        GameDetailView(game: .constant(BaseGame.sampleData[0]))
+        GameDetailView(game: .constant(BaseGame.sampleData[0]), userGames: userGames)
     }
 }

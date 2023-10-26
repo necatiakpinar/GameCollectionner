@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct SolidifyAppApp: App {
-    var userGames = UserGames(games: BaseGame.sampleData)
+    @ObservedObject var gameEvents = GameEvents()
+    var userGames: UserGames {
+        return UserGames(games: BaseGame.emptyData, events: gameEvents)
+    }
     var body: some Scene {
         WindowGroup {
-            MainView(games: .constant(BaseGame.sampleData), userGames: userGames)
+            MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameEvents: gameEvents)
         }
     }
 }

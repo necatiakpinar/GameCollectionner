@@ -1,8 +1,9 @@
-//
-//  GameEvents.swift
-//  SolidifyApp
-//
-//  Created by Necati Akpınar on 24.10.2023.
-//
+import Combine
 
-import Foundation
+class GameEvents: ObservableObject {
+    let gameAdded = PassthroughSubject<BaseGame,Never>()
+    let gameRemoved = PassthroughSubject<BaseGame,Never>()
+    let checkIfGameIsAdded = PassthroughSubject<BaseGame, Never>()  
+    let isGameAddedResponse = CurrentValueSubject<(BaseGame, Bool), Never>((BaseGame(name: "null", genre: Constants.GameGenre.action), false))
+    
+}
