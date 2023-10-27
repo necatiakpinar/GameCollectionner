@@ -3,13 +3,13 @@ import Combine
 
 struct GameDetailView: View {
     @Binding var game: BaseGame
-    @ObservedObject var userGames: UserGames
+    @ObservedObject var userGames: UserGamesViewModel
     @State private var isAdded: Bool = false
     
     var body: some View {
         List {
             Section(header: Text("Definition")) {
-                Text("\(game.name) is a great game bro")
+                Text("\(game.definition)")
                 
                 Button(action: {
                     isAdded.toggle()
@@ -55,7 +55,7 @@ struct GameDetailView: View {
 
 struct GameDetailView_PreviewProvider: PreviewProvider
 {
-    static var userGames = UserGames(games: BaseGame.sampleData, events: GameEvents())
+    static var userGames = UserGamesViewModel(games: BaseGame.sampleData, events: GameEvents())
     
     static var previews: some View {
         GameDetailView(game: .constant(BaseGame.sampleData[0]), userGames: userGames)

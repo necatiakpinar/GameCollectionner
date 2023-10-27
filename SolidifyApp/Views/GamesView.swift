@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GamesView: View {
     @Binding var games: [BaseGame]
-    var userGames: UserGames
+    var userGames: UserGamesViewModel
     @State private var selectedGame: BaseGame?
     @Binding var selectedTabIndex: Int
     let tabIndex = 1
@@ -55,7 +55,7 @@ struct GamesView: View {
 
 
 struct GamesView_PreviewProvider: PreviewProvider {
-    static var userGames = UserGames(games: BaseGame.sampleData, events: GameEvents())
+    static var userGames = UserGamesViewModel(games: BaseGame.sampleData, events: GameEvents())
     
     static var previews: some View {
         GamesView(games: .constant(BaseGame.sampleData), userGames: userGames, selectedTabIndex: .constant(1))

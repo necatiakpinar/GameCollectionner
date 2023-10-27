@@ -10,33 +10,36 @@ import SwiftUI
 struct MainView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var games: [BaseGame]
-    @ObservedObject var userGames: UserGames
+    @ObservedObject var userGames: UserGamesViewModel
     var gameEvents: GameEvents
     @State private var activeTabIndex: Int = 1
     
     var body: some View {
-        TabView(selection: $activeTabIndex) {
-            GamesView(games: $games, userGames: userGames, selectedTabIndex: $activeTabIndex)
-                .tabItem { Text("Home") }
-                .tag(1)
-            
+        VStack {
+            TabView(selection: $activeTabIndex) {
+                GamesView(games: $games, userGames: userGames, selectedTabIndex: $activeTabIndex)
+                    .tabItem { Text("Home") }
+                    .tag(1)
                 
-            UserGamesView(userGames: userGames, selectedTabIndex: $activeTabIndex)
-                .tabItem { Text("My Games") }
-                .tag(2)
-            
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: addGame) {
-                    Image(systemName: "plus")
+                UserGamesView(userGames: userGames, selectedTabIndex: $activeTabIndex)
+                    .tabItem { Text("My Games") }
+                    .tag(2)
+                
+                Text("lokka").tabItem { Text("Test") }.tag(3)
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: addGame) {
+                        Image(systemName: "plus")
+                    }
                 }
             }
         }
     }
     
     func addGame() {
-        let newGame = BaseGame(name: "New Game \(games.count + 1)", genre: Constants.GameGenre.horror)
+        let newGame = BaseGame(name: "New Game \(games.count + 1)", genre: Constants.GameGenre.horror, definition: "Test Definition")
         userGames.addGame(game: newGame)
     }
     
@@ -45,8 +48,8 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         @StateObject var gameEvents = GameEvents()
-        var userGames: UserGames {
-            return UserGames(games: BaseGame.emptyData, events: gameEvents)
+        var userGames: UserGamesViewModel {
+            return UserGamesViewModel(games: BaseGame.emptyData, events: gameEvents)
         }
         MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameEvents: GameEvents())
     }

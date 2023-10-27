@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct UserGamesView: View {
-    @StateObject var userGames: UserGames
+    @StateObject var userGames: UserGamesViewModel
     @State private var selectedGame: BaseGame?
     @Binding var selectedTabIndex: Int
     let tabIndex = 2
@@ -45,7 +45,7 @@ struct UserGamesView: View {
 
 struct UserGamesView_PreviewProvider: PreviewProvider
 {
-    static var userGames = UserGames(games: BaseGame.sampleData, events: GameEvents())
+    static var userGames = UserGamesViewModel(games: BaseGame.sampleData, events: GameEvents())
     
     static var previews: some View {
         UserGamesView(userGames: userGames, selectedTabIndex: .constant(1))

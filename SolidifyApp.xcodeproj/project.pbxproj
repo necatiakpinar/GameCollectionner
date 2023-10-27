@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		DF49BA592AE5079400D10036 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49BA582AE5079400D10036 /* Theme.swift */; };
 		DF760E072AE6EF2E008BCE16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF760E062AE6EF2E008BCE16 /* MainView.swift */; };
-		DF760E092AE799DE008BCE16 /* UserGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF760E082AE799DE008BCE16 /* UserGames.swift */; };
+		DF760E092AE799DE008BCE16 /* UserGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF760E082AE799DE008BCE16 /* UserGamesViewModel.swift */; };
+		DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */; };
+		DF9BADC02AEB8EF5001C2C7C /* GameCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADBF2AEB8EF5001C2C7C /* GameCommentViewModel.swift */; };
+		DF9BADC22AEB8F4A001C2C7C /* GameCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */; };
 		DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */; };
 		DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */; };
 		DFC8936E2AE3AAE7006C3A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */; };
@@ -26,7 +29,10 @@
 /* Begin PBXFileReference section */
 		DF49BA582AE5079400D10036 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF760E062AE6EF2E008BCE16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		DF760E082AE799DE008BCE16 /* UserGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGames.swift; sourceTree = "<group>"; };
+		DF760E082AE799DE008BCE16 /* UserGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGamesViewModel.swift; sourceTree = "<group>"; };
+		DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComment.swift; sourceTree = "<group>"; };
+		DF9BADBF2AEB8EF5001C2C7C /* GameCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCommentViewModel.swift; sourceTree = "<group>"; };
+		DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCommentView.swift; sourceTree = "<group>"; };
 		DFC893662AE3AAE6006C3A31 /* SolidifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolidifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidifyAppApp.swift; sourceTree = "<group>"; };
 		DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF9BADBE2AEB8E72001C2C7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DF760E082AE799DE008BCE16 /* UserGamesViewModel.swift */,
+				DF9BADBF2AEB8EF5001C2C7C /* GameCommentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DFC8935D2AE3AAE6006C3A31 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +86,7 @@
 		DFC893682AE3AAE6006C3A31 /* SolidifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				DF9BADBE2AEB8E72001C2C7C /* ViewModel */,
 				DFD1757A2AE3B58800613AB3 /* Models */,
 				DFD1757B2AE3B75A00613AB3 /* Views */,
 				DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */,
@@ -79,7 +95,6 @@
 				DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */,
 				DFC8936F2AE3AAE7006C3A31 /* Preview Content */,
 				DF49BA582AE5079400D10036 /* Theme.swift */,
-				DFD3FC5D2AE834E900F1200F /* GameEvents.swift */,
 			);
 			path = SolidifyApp;
 			sourceTree = "<group>";
@@ -95,8 +110,9 @@
 		DFD1757A2AE3B58800613AB3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DFD3FC5D2AE834E900F1200F /* GameEvents.swift */,
 				DFD1757E2AE3C31400613AB3 /* BaseGame.swift */,
-				DF760E082AE799DE008BCE16 /* UserGames.swift */,
+				DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 				DFD9E7D02AE5201E00B43030 /* GameDetailView.swift */,
 				DFE9D0F82AE6E71A00919493 /* UserGamesView.swift */,
 				DF760E062AE6EF2E008BCE16 /* MainView.swift */,
+				DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,16 +200,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9BADC02AEB8EF5001C2C7C /* GameCommentViewModel.swift in Sources */,
 				DFD175832AE3CED800613AB3 /* GamesView.swift in Sources */,
+				DF9BADC22AEB8F4A001C2C7C /* GameCommentView.swift in Sources */,
 				DFD175812AE3C40C00613AB3 /* Constants.swift in Sources */,
 				DFD3FC5E2AE834E900F1200F /* GameEvents.swift in Sources */,
 				DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */,
 				DF760E072AE6EF2E008BCE16 /* MainView.swift in Sources */,
+				DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */,
 				DFD1757D2AE3B7E000613AB3 /* GameCardView.swift in Sources */,
 				DFD1757F2AE3C31400613AB3 /* BaseGame.swift in Sources */,
 				DFE9D0F92AE6E71A00919493 /* UserGamesView.swift in Sources */,
 				DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */,
-				DF760E092AE799DE008BCE16 /* UserGames.swift in Sources */,
+				DF760E092AE799DE008BCE16 /* UserGamesViewModel.swift in Sources */,
 				DF49BA592AE5079400D10036 /* Theme.swift in Sources */,
 				DFD9E7D12AE5201E00B43030 /* GameDetailView.swift in Sources */,
 			);

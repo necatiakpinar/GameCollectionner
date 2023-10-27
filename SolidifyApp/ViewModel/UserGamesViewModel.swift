@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class UserGames: ObservableObject {
+class UserGamesViewModel: ObservableObject {
     @Published var games: [BaseGame] = []
     var cancellables: Set<AnyCancellable> = []
     

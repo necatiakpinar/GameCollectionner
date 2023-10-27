@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct SolidifyAppApp: App {
     @ObservedObject var gameEvents = GameEvents()
-    var userGames: UserGames {
-        return UserGames(games: BaseGame.emptyData, events: gameEvents)
+    var userGames: UserGamesViewModel {
+        return UserGamesViewModel(games: BaseGame.emptyData, events: gameEvents)
     }
     var body: some Scene {
         WindowGroup {
