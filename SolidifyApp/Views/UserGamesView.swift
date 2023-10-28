@@ -2,6 +2,8 @@ import SwiftUI
 
 struct UserGamesView: View {
     @StateObject var userGames: UserGamesViewModel
+    var gameComments: GameCommentViewModel
+    
     @State private var selectedGame: BaseGame?
     @Binding var selectedTabIndex: Int
     let tabIndex = 2
@@ -16,7 +18,7 @@ struct UserGamesView: View {
                         GameCardView(game: game)
                     }
                     .background(
-                        NavigationLink("", destination: GameDetailView(game: .constant(game), userGames: userGames), isActive: Binding(
+                        NavigationLink("", destination: GameDetailView(game: .constant(game), userGames: userGames, gameComments: gameComments), isActive: Binding(
                             get: { selectedGame == game },
                             set: { newValue in
                                 if !newValue {
@@ -48,7 +50,7 @@ struct UserGamesView_PreviewProvider: PreviewProvider
     static var userGames = UserGamesViewModel(games: BaseGame.sampleData, events: GameEvents())
     
     static var previews: some View {
-        UserGamesView(userGames: userGames, selectedTabIndex: .constant(1))
+        UserGamesView(userGames: userGames, gameComments: GameCommentViewModel(),selectedTabIndex: .constant(1))
     }
 }
 

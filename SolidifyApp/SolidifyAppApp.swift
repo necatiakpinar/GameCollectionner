@@ -9,13 +9,17 @@ import SwiftUI
 
 @main
 struct SolidifyAppApp: App {
+    
     @ObservedObject var gameEvents = GameEvents()
     var userGames: UserGamesViewModel {
         return UserGamesViewModel(games: BaseGame.emptyData, events: gameEvents)
     }
+    
+    var gameComments = GameCommentViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameEvents: gameEvents)
+            MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameComments: gameComments, gameEvents: gameEvents)
         }
     }
 }

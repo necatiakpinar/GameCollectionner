@@ -14,7 +14,6 @@ class BaseGame: Identifiable
         self.definition = definition
     }
     
-    
 }
 
 extension BaseGame {

@@ -11,17 +11,19 @@ struct MainView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var games: [BaseGame]
     @ObservedObject var userGames: UserGamesViewModel
+    @ObservedObject var gameComments: GameCommentViewModel
+    
     var gameEvents: GameEvents
     @State private var activeTabIndex: Int = 1
     
     var body: some View {
         VStack {
             TabView(selection: $activeTabIndex) {
-                GamesView(games: $games, userGames: userGames, selectedTabIndex: $activeTabIndex)
+                GamesView(games: $games, userGames: userGames, gameComments: gameComments, selectedTabIndex: $activeTabIndex)
                     .tabItem { Text("Home") }
                     .tag(1)
                 
-                UserGamesView(userGames: userGames, selectedTabIndex: $activeTabIndex)
+                UserGamesView(userGames: userGames, gameComments: gameComments, selectedTabIndex: $activeTabIndex)
                     .tabItem { Text("My Games") }
                     .tag(2)
                 
@@ -51,7 +53,9 @@ struct MainView_Previews: PreviewProvider {
         var userGames: UserGamesViewModel {
             return UserGamesViewModel(games: BaseGame.emptyData, events: gameEvents)
         }
-        MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameEvents: GameEvents())
+        var gameComments = GameCommentViewModel()
+        
+        MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameComments: gameComments,  gameEvents: GameEvents())
     }
 }
 

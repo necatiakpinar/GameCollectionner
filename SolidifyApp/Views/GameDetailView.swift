@@ -4,8 +4,9 @@ import Combine
 struct GameDetailView: View {
     @Binding var game: BaseGame
     @ObservedObject var userGames: UserGamesViewModel
+    @ObservedObject var gameComments: GameCommentViewModel
     @State private var isAdded: Bool = false
-    
+    @State private var enteredText: String = ""
     var body: some View {
         List {
             Section(header: Text("Definition")) {
@@ -39,6 +40,28 @@ struct GameDetailView: View {
                     }
                 }
             }
+            Section(header: Text("Comments")) {
+                VStack{
+                    if let gameCommentsForThisGame = gameComments.comments[game.id] {
+                        ForEach(gameCommentsForThisGame, id: \.self) { comment in
+                            Text(comment)
+                        }
+                    }
+                    
+                }
+                
+                HStack{
+                    TextField("Enter Comment...", text: $enteredText)
+                    Button(action: {
+                        gameComments.addComment(gameID: game.id, comment: enteredText)
+                        print("Button pressed")
+                    }) {
+                        Text("Add Comment")
+                    }
+                    
+                }
+            }
+            
         }
         .onAppear {
             if userGames.hasGame(game: game) {
@@ -47,9 +70,9 @@ struct GameDetailView: View {
         }
         .buttonStyle(PlainButtonStyle())
         .navigationTitle(game.name)
-        
-        
-    }
+    
+    
+}
 }
 
 
@@ -58,6 +81,6 @@ struct GameDetailView_PreviewProvider: PreviewProvider
     static var userGames = UserGamesViewModel(games: BaseGame.sampleData, events: GameEvents())
     
     static var previews: some View {
-        GameDetailView(game: .constant(BaseGame.sampleData[0]), userGames: userGames)
+        GameDetailView(game: .constant(BaseGame.sampleData[0]), userGames: userGames, gameComments: GameCommentViewModel())
     }
 }
