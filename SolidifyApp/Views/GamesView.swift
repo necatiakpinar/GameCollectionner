@@ -34,7 +34,7 @@ struct GamesView: View {
                                 }
                             }
                         ))
-                        .opacity(0) // Görünmez yapıyoruz
+
                     )
                 }
             }
