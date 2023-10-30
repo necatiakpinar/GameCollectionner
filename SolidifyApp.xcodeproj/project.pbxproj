@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF49BA592AE5079400D10036 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49BA582AE5079400D10036 /* Theme.swift */; };
+		DF7473012AF0046E00B7CE42 /* GameDetailDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7473002AF0046E00B7CE42 /* GameDetailDefinitionView.swift */; };
+		DF7473032AF0062500B7CE42 /* GameDetailCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7473022AF0062500B7CE42 /* GameDetailCommentsView.swift */; };
 		DF760E072AE6EF2E008BCE16 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF760E062AE6EF2E008BCE16 /* MainView.swift */; };
 		DF760E092AE799DE008BCE16 /* UserGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF760E082AE799DE008BCE16 /* UserGamesViewModel.swift */; };
 		DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		DF49BA582AE5079400D10036 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DF7473002AF0046E00B7CE42 /* GameDetailDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDefinitionView.swift; sourceTree = "<group>"; };
+		DF7473022AF0062500B7CE42 /* GameDetailCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCommentsView.swift; sourceTree = "<group>"; };
 		DF760E062AE6EF2E008BCE16 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DF760E082AE799DE008BCE16 /* UserGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGamesViewModel.swift; sourceTree = "<group>"; };
 		DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComment.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				DFE9D0F82AE6E71A00919493 /* UserGamesView.swift */,
 				DF760E062AE6EF2E008BCE16 /* MainView.swift */,
 				DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */,
+				DF7473002AF0046E00B7CE42 /* GameDetailDefinitionView.swift */,
+				DF7473022AF0062500B7CE42 /* GameDetailCommentsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 				DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */,
 				DFD1757D2AE3B7E000613AB3 /* GameCardView.swift in Sources */,
 				DFD1757F2AE3C31400613AB3 /* BaseGame.swift in Sources */,
+				DF7473012AF0046E00B7CE42 /* GameDetailDefinitionView.swift in Sources */,
+				DF7473032AF0062500B7CE42 /* GameDetailCommentsView.swift in Sources */,
 				DFE9D0F92AE6E71A00919493 /* UserGamesView.swift in Sources */,
 				DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */,
 				DF760E092AE799DE008BCE16 /* UserGamesViewModel.swift in Sources */,
