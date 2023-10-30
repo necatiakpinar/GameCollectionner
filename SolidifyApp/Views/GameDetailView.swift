@@ -44,17 +44,19 @@ struct GameDetailView: View {
                 VStack{
                     if let gameCommentsForThisGame = gameComments.comments[game.id] {
                         ForEach(gameCommentsForThisGame, id: \.self) { comment in
-                            Text(comment)
+                            GameCommentView(comment: comment, gameID: game.id, gameComments: gameComments)
                         }
                     }
                     
                 }
                 
                 HStack{
-                    TextField("Enter Comment...", text: $enteredText)
+                    TextField("Enter Comment...", text: $enteredText, onCommit: {
+                        handleCommentEnter()
+            
+                    })
                     Button(action: {
-                        gameComments.addComment(gameID: game.id, comment: enteredText)
-                        print("Button pressed")
+                        handleCommentEnter()
                     }) {
                         Text("Add Comment")
                     }
@@ -70,9 +72,17 @@ struct GameDetailView: View {
         }
         .buttonStyle(PlainButtonStyle())
         .navigationTitle(game.name)
+        
+        
+    }
     
+    func handleCommentEnter() {
+        gameComments.addComment(gameID: game.id, comment: enteredText)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            enteredText = ""
+        }	
+    }
     
-}
 }
 
 

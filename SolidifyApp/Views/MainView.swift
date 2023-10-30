@@ -53,7 +53,7 @@ struct MainView_Previews: PreviewProvider {
         var userGames: UserGamesViewModel {
             return UserGamesViewModel(games: BaseGame.emptyData, events: gameEvents)
         }
-        var gameComments = GameCommentViewModel()
+        let gameComments = GameCommentViewModel()
         
         MainView(games: .constant(BaseGame.sampleData), userGames: userGames, gameComments: gameComments,  gameEvents: GameEvents())
     }
