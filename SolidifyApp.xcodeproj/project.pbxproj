@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF02162E2AF2288600EADE10 /* Sortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF02162D2AF2288600EADE10 /* Sortable.swift */; };
 		DF49BA592AE5079400D10036 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49BA582AE5079400D10036 /* Theme.swift */; };
 		DF7473012AF0046E00B7CE42 /* GameDetailDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7473002AF0046E00B7CE42 /* GameDetailDefinitionView.swift */; };
 		DF7473032AF0062500B7CE42 /* GameDetailCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7473022AF0062500B7CE42 /* GameDetailCommentsView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF02162D2AF2288600EADE10 /* Sortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sortable.swift; sourceTree = "<group>"; };
 		DF49BA582AE5079400D10036 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF7473002AF0046E00B7CE42 /* GameDetailDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDefinitionView.swift; sourceTree = "<group>"; };
 		DF7473022AF0062500B7CE42 /* GameDetailCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailCommentsView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF02162C2AF227B800EADE10 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DF02162D2AF2288600EADE10 /* Sortable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DF9BADBE2AEB8E72001C2C7C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		DFC893682AE3AAE6006C3A31 /* SolidifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				DF02162C2AF227B800EADE10 /* Protocols */,
 				DF9BADBE2AEB8E72001C2C7C /* ViewModel */,
 				DFD1757A2AE3B58800613AB3 /* Models */,
 				DFD1757B2AE3B75A00613AB3 /* Views */,
@@ -211,6 +222,7 @@
 				DF9BADC22AEB8F4A001C2C7C /* GameCommentView.swift in Sources */,
 				DFD175812AE3C40C00613AB3 /* Constants.swift in Sources */,
 				DFD3FC5E2AE834E900F1200F /* GameEvents.swift in Sources */,
+				DF02162E2AF2288600EADE10 /* Sortable.swift in Sources */,
 				DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */,
 				DF760E072AE6EF2E008BCE16 /* MainView.swift in Sources */,
 				DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */,

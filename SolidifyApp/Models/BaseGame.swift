@@ -17,7 +17,7 @@ class BaseGame: Identifiable
 }
 
 extension BaseGame {
-    static let sampleData: [BaseGame] =
+    static var sampleData: [BaseGame] =
     [
         BaseGame(name: "The Last Of Us", genre: Constants.GameGenre.action, definition: "Last of us is a great game which has horror"),
         BaseGame(name: "Fifa 24", genre: Constants.GameGenre.sports, definition: "EA's football game fifa's new game!"),
@@ -29,6 +29,7 @@ extension BaseGame {
     ]
     
     static let emptyData: [BaseGame] = []
+    
 }
 
 
@@ -36,5 +37,12 @@ extension BaseGame: Equatable {
     
     static func == (lhs: BaseGame, rhs: BaseGame) -> Bool {
         return lhs.id == rhs.id
+    }
+}
+
+extension BaseGame: Comparable {
+    
+    static func < (lhs: BaseGame, rhs: BaseGame) -> Bool {
+        return lhs.name < rhs.name
     }
 }

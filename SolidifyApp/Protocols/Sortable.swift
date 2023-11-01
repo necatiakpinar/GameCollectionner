@@ -1,0 +1,3 @@
+protocol Sortable {
+    func sortElements()
+}

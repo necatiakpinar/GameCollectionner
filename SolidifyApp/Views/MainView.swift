@@ -25,10 +25,8 @@ struct MainView: View {
                 
                 UserGamesView(userGames: userGames, gameComments: gameComments, selectedTabIndex: $activeTabIndex)
                     .tabItem { Text("My Games") }
-                    .tag(2)
-                
-                Text("lokka").tabItem { Text("Test") }.tag(3)
-                
+                    .tag(2)            
+
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

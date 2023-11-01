@@ -11,6 +11,10 @@ struct UserGamesView: View {
     var body: some View {
         NavigationView {
             List {
+                Section(header: Text("Info")) {
+                    Text("Total Game: \(userGames.games.count)")
+                    
+                }
                 ForEach(userGames.games) { game in
                     Button(action: {
                         selectedGame = game
@@ -30,14 +34,14 @@ struct UserGamesView: View {
                     )
                 }
             }
-            .navigationTitle("Games")
+            .navigationTitle("My Games")
         }
         .onAppear {
             selectedTabIndex = tabIndex
+            userGames.sortElements()
         }
         .onChange(of: selectedTabIndex) { newValue in
             if newValue != tabIndex {
-                print("tab degisti")
                 selectedGame = nil
             }
         }

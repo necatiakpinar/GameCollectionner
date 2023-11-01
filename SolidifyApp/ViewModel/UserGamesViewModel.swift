@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class UserGamesViewModel: ObservableObject {
+class UserGamesViewModel: ObservableObject, Sortable {
     @Published var games: [BaseGame] = []
     var cancellables: Set<AnyCancellable> = []
     
@@ -45,6 +45,10 @@ class UserGamesViewModel: ObservableObject {
     
     func hasGame(game: BaseGame) -> Bool {
         return games.contains(game)
+    }
+    
+    func sortElements() {
+        games.sort()
     }
     
 }

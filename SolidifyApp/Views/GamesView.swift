@@ -34,14 +34,15 @@ struct GamesView: View {
                                 }
                             }
                         ))
-
+                        
                     )
                 }
             }
-            .navigationTitle("Games")
+            .navigationTitle("All Games")
         }
         .onAppear {
             selectedTabIndex = tabIndex
+            
         }
         .onChange(of: selectedTabIndex) { newValue in
             if newValue != tabIndex {
@@ -49,8 +50,8 @@ struct GamesView: View {
                 selectedGame = nil
             }
         }
-
-
+        
+        
     }
 }
 

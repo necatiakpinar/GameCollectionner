@@ -36,6 +36,10 @@ struct GameDetailDefinitionView: View {
                         .foregroundColor(isAdded ? .green : .blue)
                 }
             }
+        }.onAppear {
+            if userGames.hasGame(game: game) {
+                isAdded = true
+            }
         }
     }
 }
