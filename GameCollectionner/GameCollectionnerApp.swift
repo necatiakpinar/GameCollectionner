@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SolidifyAppApp: App {
+struct GameCollectionnerApp: App {
     
     @ObservedObject var gameEvents = GameEvents()
     var userGames: UserGamesViewModel {

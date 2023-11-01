@@ -16,7 +16,7 @@
 		DF9BADBD2AEB8E40001C2C7C /* GameComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */; };
 		DF9BADC02AEB8EF5001C2C7C /* GameCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADBF2AEB8EF5001C2C7C /* GameCommentViewModel.swift */; };
 		DF9BADC22AEB8F4A001C2C7C /* GameCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */; };
-		DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */; };
+		DFC8936A2AE3AAE6006C3A31 /* GameCollectionnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC893692AE3AAE6006C3A31 /* GameCollectionnerApp.swift */; };
 		DFC8936C2AE3AAE6006C3A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */; };
 		DFC8936E2AE3AAE7006C3A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */; };
 		DFC893712AE3AAE7006C3A31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC893702AE3AAE7006C3A31 /* Preview Assets.xcassets */; };
@@ -39,8 +39,8 @@
 		DF9BADBC2AEB8E40001C2C7C /* GameComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameComment.swift; sourceTree = "<group>"; };
 		DF9BADBF2AEB8EF5001C2C7C /* GameCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCommentViewModel.swift; sourceTree = "<group>"; };
 		DF9BADC12AEB8F4A001C2C7C /* GameCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCommentView.swift; sourceTree = "<group>"; };
-		DFC893662AE3AAE6006C3A31 /* SolidifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolidifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidifyAppApp.swift; sourceTree = "<group>"; };
+		DFC893662AE3AAE6006C3A31 /* GameCollectionner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCollectionner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC893692AE3AAE6006C3A31 /* GameCollectionnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionnerApp.swift; sourceTree = "<group>"; };
 		DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC893702AE3AAE7006C3A31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		DFC8935D2AE3AAE6006C3A31 = {
 			isa = PBXGroup;
 			children = (
-				DFC893682AE3AAE6006C3A31 /* SolidifyApp */,
+				DFC893682AE3AAE6006C3A31 /* GameCollectionner */,
 				DFC893672AE3AAE6006C3A31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,26 +92,26 @@
 		DFC893672AE3AAE6006C3A31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFC893662AE3AAE6006C3A31 /* SolidifyApp.app */,
+				DFC893662AE3AAE6006C3A31 /* GameCollectionner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFC893682AE3AAE6006C3A31 /* SolidifyApp */ = {
+		DFC893682AE3AAE6006C3A31 /* GameCollectionner */ = {
 			isa = PBXGroup;
 			children = (
 				DF02162C2AF227B800EADE10 /* Protocols */,
 				DF9BADBE2AEB8E72001C2C7C /* ViewModel */,
 				DFD1757A2AE3B58800613AB3 /* Models */,
 				DFD1757B2AE3B75A00613AB3 /* Views */,
-				DFC893692AE3AAE6006C3A31 /* SolidifyAppApp.swift */,
+				DFC893692AE3AAE6006C3A31 /* GameCollectionnerApp.swift */,
 				DFC8936B2AE3AAE6006C3A31 /* ContentView.swift */,
 				DFD175802AE3C40C00613AB3 /* Constants.swift */,
 				DFC8936D2AE3AAE7006C3A31 /* Assets.xcassets */,
 				DFC8936F2AE3AAE7006C3A31 /* Preview Content */,
 				DF49BA582AE5079400D10036 /* Theme.swift */,
 			);
-			path = SolidifyApp;
+			path = GameCollectionner;
 			sourceTree = "<group>";
 		};
 		DFC8936F2AE3AAE7006C3A31 /* Preview Content */ = {
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFC893652AE3AAE6006C3A31 /* SolidifyApp */ = {
+		DFC893652AE3AAE6006C3A31 /* GameCollectionner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFC893742AE3AAE7006C3A31 /* Build configuration list for PBXNativeTarget "SolidifyApp" */;
+			buildConfigurationList = DFC893742AE3AAE7006C3A31 /* Build configuration list for PBXNativeTarget "GameCollectionner" */;
 			buildPhases = (
 				DFC893622AE3AAE6006C3A31 /* Sources */,
 				DFC893632AE3AAE6006C3A31 /* Frameworks */,
@@ -162,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = SolidifyApp;
+			name = GameCollectionner;
 			productName = SolidifyApp;
-			productReference = DFC893662AE3AAE6006C3A31 /* SolidifyApp.app */;
+			productReference = DFC893662AE3AAE6006C3A31 /* GameCollectionner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFC893612AE3AAE6006C3A31 /* Build configuration list for PBXProject "SolidifyApp" */;
+			buildConfigurationList = DFC893612AE3AAE6006C3A31 /* Build configuration list for PBXProject "GameCollectionner" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -195,7 +195,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFC893652AE3AAE6006C3A31 /* SolidifyApp */,
+				DFC893652AE3AAE6006C3A31 /* GameCollectionner */,
 			);
 		};
 /* End PBXProject section */
@@ -231,7 +231,7 @@
 				DF7473012AF0046E00B7CE42 /* GameDetailDefinitionView.swift in Sources */,
 				DF7473032AF0062500B7CE42 /* GameDetailCommentsView.swift in Sources */,
 				DFE9D0F92AE6E71A00919493 /* UserGamesView.swift in Sources */,
-				DFC8936A2AE3AAE6006C3A31 /* SolidifyAppApp.swift in Sources */,
+				DFC8936A2AE3AAE6006C3A31 /* GameCollectionnerApp.swift in Sources */,
 				DF760E092AE799DE008BCE16 /* UserGamesViewModel.swift in Sources */,
 				DF49BA592AE5079400D10036 /* Theme.swift in Sources */,
 				DFD9E7D12AE5201E00B43030 /* GameDetailView.swift in Sources */,
@@ -367,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SolidifyApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"/GameCollectionner/Preview Content\"";
 				DEVELOPMENT_TEAM = 6X9U4GY37Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -396,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SolidifyApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"/GameCollectionner/Preview Content\"";
 				DEVELOPMENT_TEAM = 6X9U4GY37Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -421,7 +421,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFC893612AE3AAE6006C3A31 /* Build configuration list for PBXProject "SolidifyApp" */ = {
+		DFC893612AE3AAE6006C3A31 /* Build configuration list for PBXProject "GameCollectionner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFC893722AE3AAE7006C3A31 /* Debug */,
@@ -430,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFC893742AE3AAE7006C3A31 /* Build configuration list for PBXNativeTarget "SolidifyApp" */ = {
+		DFC893742AE3AAE7006C3A31 /* Build configuration list for PBXNativeTarget "GameCollectionner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFC893752AE3AAE7006C3A31 /* Debug */,
