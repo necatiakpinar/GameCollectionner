@@ -12,7 +12,7 @@ struct UserGamesView: View {
         NavigationView {
             List {
                 Section(header: Text("Info")) {
-                    Text("Total Game: \(userGames.games.count)")
+                    Text("Total Games: \(userGames.games.count)")
                     
                 }
                 ForEach(userGames.games) { game in
